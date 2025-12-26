@@ -22,15 +22,15 @@
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
-  border-top: 98px solid #d9534f; 
+  border-top: 98px solid #d9534f;
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 140px solid #f5a3a2; 
+  border-left: 140px solid #f5a3a2;
   border-right: 140px solid #f5a3a2;
-  border-bottom: 90px solid #ff6f61; 
+  border-bottom: 90px solid #ff6f61;
   border-top: 90px solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -63,7 +63,7 @@
   left: 10%;
   width: 80%;
   height: 14%;
-  background-color: #ffe6e6; 
+  background-color: #ffe6e6;
 }
 
 .words.line1 {
@@ -80,30 +80,28 @@
 }
 
 .words.line3 {
-  top: 35%;
+  top: 32%;
   font-size: 1.1rem;
   text-align: center;
 }
 
 .words.line4 {
-  top: 50%;
+  top: 44%;
   font-size: 1.1rem;
   text-align: center;
 }
 
 .words.line5 {
-  top: 63%;
+  top: 57%;
   font-size: 1.1rem;
   text-align: center;
 }
 
 .words.line6 {
-  top: 75%;
+  top: 68%;
   font-size: 1.1rem;
   text-align: center;
 }
-
-
 
 .open .flap {
   transform: rotateX(180deg);
@@ -152,7 +150,7 @@
   top: 0;
   width: 50px;
   height: 80px;
-  background: #e60073; 
+  background: #e60073;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -175,11 +173,8 @@
   left: 20%;
   transform: scale(0.6);
   opacity: 1;
-  -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-  -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-  -webkit-animation-fill-mode: forwards;
+  animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
@@ -187,11 +182,8 @@
   left: 55%;
   transform: scale(1);
   opacity: 1;
-  -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-  -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-  -webkit-animation-fill-mode: forwards;
+  animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
@@ -199,48 +191,23 @@
   left: 10%;
   transform: scale(0.8);
   opacity: 1;
-  -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-  -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-  -webkit-animation-fill-mode: forwards;
+  animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
-@-webkit-keyframes slideUp {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -600px;
-  }
-}
 @keyframes slideUp {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -600px;
-  }
+  0% { top: 0; }
+  100% { top: -600px; }
 }
-@-webkit-keyframes sideSway {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 50px;
-  }
-}
+
 @keyframes sideSway {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 50px;
-  }
+  0% { margin-left: 0px; }
+  100% { margin-left: 50px; }
 }
+
 body {
-  background-color: #f0e6f6; 
+  background-color: #f0e6f6;
 }
 
 .envlope-wrapper {
@@ -253,20 +220,15 @@ body {
 
 .reset button {
   font-weight: 800;
-  font-style: normal;
   transition: all 0.1s linear;
-  -webkit-appearance: none;
   background-color: transparent;
   border: solid 2px #d9534f;
   border-radius: 4px;
   color: #d9534f;
-  display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
   margin: 5px;
   padding: 10px;
-  line-height: 1em;
-  text-decoration: none;
   min-width: 120px;
   cursor: pointer;
 }
@@ -274,4 +236,14 @@ body {
 .reset button:hover {
   background-color: #d9534f;
   color: #fff;
+}
+
+@media (max-width: 480px) {
+  #envelope {
+    transform: scale(1.25);
+  }
+
+  .envlope-wrapper {
+    height: 460px;
+  }
 }

@@ -238,21 +238,13 @@ body {
 }
 
 @media (max-width: 480px) {
-  #envelope {
-    width: 360px;
-    height: 240px;
-    top: 80px;
-  }
-
   .envlope-wrapper {
+    transform: scale(1.4);
+    transform-origin: top center;
     height: 520px;
   }
 
-  .words {
-    font-size: 1.3rem;
-  }
-
-  .words.line1 {
-    font-size: 0.9rem;
+  #envelope {
+    top: 80px;
   }
 }
